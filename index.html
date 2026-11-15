@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-br" class="escuro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <title>Renan Pinheiro | Product &amp; Tech</title>
+    <meta
+      name="description"
+      content="Portfólio de Renan Pinheiro: estudante de Análise e Desenvolvimento de Sistemas com experiência em suporte, VR/AR e foco em Produto."
+    />
+    <script>
+      // Aplica o tema salvo antes de desenhar a página (evita piscar a cor errada).
+      try {
+        var t = localStorage.getItem('tema');
+        if (t === 'claro') document.documentElement.className = 'claro';
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
