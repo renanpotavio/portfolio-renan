@@ -39,7 +39,8 @@
   }
 
   body {
-    @apply bg-fundo font-sans text-texto antialiased;
+    /* Sem fundo próprio: a cor fica no <html> para o canvas aparecer por trás. */
+    @apply font-sans text-texto antialiased;
   }
 
   main section[id] {

@@ -5,7 +5,7 @@ import { useTema } from '../contexts/TemaContext';
 import { SECOES } from '../data/secoes';
 import { EASE_SUAVE } from '../lib/movimento';
 
-const CURRICULO = '/curriculo-renan-pinheiro.pdf';
+import { CURRICULO } from '../data/links';
 
 function BotaoTema() {
   const { tema, alternarTema } = useTema();
