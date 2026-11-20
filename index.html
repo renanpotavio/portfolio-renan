@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="pt-br" class="escuro">
+<html lang="pt-br" class="claro">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="dark light" />
+    <meta name="color-scheme" content="light dark" />
     <title>Renan Pinheiro | Product &amp; Tech</title>
     <meta
       name="description"
       content="Portfólio de Renan Pinheiro: estudante de Análise e Desenvolvimento de Sistemas com experiência em suporte, VR/AR e foco em Produto."
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="theme-color" content="#0b1020" />
+    <meta name="theme-color" content="#f5f7fb" />
 
     <!-- Prévia do link (WhatsApp, LinkedIn etc.). PROVISÓRIO: confirmar o endereço final do site. -->
     <meta property="og:type" content="website" />
@@ -27,10 +27,10 @@
     <meta name="twitter:description" content="Tecnologia, produto e pessoas: experiência em suporte, projetos VR/AR e foco em Product Owner." />
     <meta name="twitter:image" content="https://portfolio-renan-pinheiro.vercel.app/og-image.png" />
     <script>
-      // Aplica o tema salvo antes de desenhar a página (evita piscar a cor errada).
+      // Padrão: tema claro. Aplica o escuro só se a pessoa escolheu antes (evita piscar a cor errada).
       try {
         var t = localStorage.getItem('tema');
-        if (t === 'claro') document.documentElement.className = 'claro';
+        if (t === 'escuro') document.documentElement.className = 'escuro';
       } catch (e) {}
     </script>
   </head>

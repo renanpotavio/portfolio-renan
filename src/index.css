@@ -4,7 +4,7 @@
 @custom-variant claro (&:where(.claro, .claro *));
 
 @theme {
-  /* Tema escuro (padrão): azul-noite com destaque azul elétrico */
+  /* Tema escuro: azul-noite com destaque azul elétrico (o padrão do site é o claro, definido no index.html) */
   --color-fundo: #0b1020;
   --color-cartao: #121a2e;
   --color-borda: #22304d;
