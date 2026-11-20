@@ -3,7 +3,7 @@ import Revelar from './Revelar';
 
 export default function Experiencia() {
   return (
-    <section id="experiencia" data-fundo="fraco" className="container-site py-24 sm:py-32">
+    <section id="experiencia" data-fundo="fraco" className="container-site py-20 sm:py-24">
       <Revelar>
         <p className="rotulo">Experiência</p>
         <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Minha trajetória</h2>

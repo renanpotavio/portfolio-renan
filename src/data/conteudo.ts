@@ -78,8 +78,9 @@ export const EXPERIENCIAS: Experiencia[] = [
     itens: [
       'Suporte de primeiro nível para clientes e colaboradores internos.',
       'Abertura, acompanhamento e registro de chamados, com escalonamento para o N2.',
-      'Identificação, análise e documentação de bugs na plataforma.',
+      'Identificação, análise e documentação de bugs, com testes básicos para validar problemas.',
       'Participação em reuniões de alinhamento e priorização de demandas.',
+      'Apoio no onboarding e orientação de usuários.',
     ],
   },
   {
@@ -89,7 +90,7 @@ export const EXPERIENCIAS: Experiencia[] = [
     itens: [
       'Desenvolvimento de aplicações em Unity e C# para realidade virtual e aumentada.',
       'Criação e modelagem de assets 3D no Blender.',
-      'Participação em todas as etapas do ciclo de desenvolvimento.',
+      'Testes, manutenção e colaboração em todas as etapas do ciclo de desenvolvimento.',
     ],
   },
   {
@@ -99,6 +100,7 @@ export const EXPERIENCIAS: Experiencia[] = [
     itens: [
       'Controle de planilhas, relatórios, indicadores e documentos internos.',
       'Suporte aos colaboradores em processos administrativos.',
+      'Desenvolvimento de habilidades técnicas e interpessoais: comunicação, organização e trabalho em equipe.',
     ],
   },
 ];
@@ -132,30 +134,52 @@ export const TRILHAS_PM3 = [
   'Responsible AI',
 ];
 
+// Módulos do curso de Product Management da PM3 (currículo do Renan)
+export const MODULOS_PM3 = [
+  'Fundamentos de Produto',
+  'Product Discovery',
+  'Product Delivery',
+  'Scrum e Kanban',
+  'Priorização de Demandas',
+  'Métricas de Produto',
+];
+
 export const OBJETIVO =
   'Atuar como Product Owner Júnior, contribuindo para a evolução de produtos digitais, conectando as necessidades dos usuários com as equipes de tecnologia e gerando impacto real para o negócio.';
 
-// Só o que está no currículo. Ferramentas do exemplo (Figma, Notion, SQL...) entram após confirmação.
+// Currículo + ferramentas do exemplo de layout que o Renan mandou.
 export const GRUPOS_SKILLS = [
+  {
+    titulo: 'Desenvolvimento',
+    icone: 'dev',
+    itens: ['C#', 'Unity', 'Git', 'VS Code', 'HTML', 'CSS', 'JavaScript'],
+  },
+  {
+    titulo: 'Design, 3D e XR',
+    icone: 'design',
+    itens: ['Blender', 'Figma', 'Photoshop', 'Illustrator', 'Realidade Virtual', 'Realidade Aumentada'],
+  },
   {
     titulo: 'Produto e Agilidade',
     icone: 'produto',
-    itens: ['Product Discovery', 'Product Delivery', 'Métricas de Produto', 'Priorização', 'Scrum', 'Kanban', 'Jira'],
+    itens: ['Jira', 'Trello', 'Miro', 'Notion', 'Scrum', 'Kanban', 'Product Discovery', 'Métricas de Produto', 'Priorização'],
   },
   {
-    titulo: 'Suporte e Atendimento',
+    titulo: 'Suporte e Outros',
     icone: 'suporte',
-    itens: ['Suporte Técnico N1', 'Atendimento ao Usuário', 'Gestão de Chamados', 'Documentação Técnica', 'Análise de Bugs'],
-  },
-  {
-    titulo: 'Desenvolvimento e 3D',
-    icone: 'dev',
-    itens: ['C#', 'Unity', 'Blender', 'Realidade Virtual', 'Realidade Aumentada', 'HTML', 'CSS', 'JavaScript'],
-  },
-  {
-    titulo: 'Ferramentas',
-    icone: 'ferramentas',
-    itens: ['Windows', 'Microsoft 365', 'Redes Básicas'],
+    itens: [
+      'Suporte Técnico N1',
+      'Atendimento ao Usuário',
+      'Gestão de Chamados',
+      'Documentação Técnica',
+      'Análise de Bugs',
+      'SQL',
+      'Excel',
+      'Google Workspace',
+      'Microsoft 365',
+      'Windows',
+      'Redes Básicas',
+    ],
   },
 ] as const;
 

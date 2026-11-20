@@ -15,7 +15,7 @@ export default function Projetos() {
   const lista = filtro === 'Todos' ? PROJETOS : PROJETOS.filter((p) => p.categoria === filtro);
 
   return (
-    <section id="projetos" data-fundo="medio" className="container-site py-24 sm:py-32">
+    <section id="projetos" data-fundo="medio" className="container-site py-20 sm:py-24">
       <Revelar className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div className="max-w-xl">
           <p className="rotulo">Projetos</p>

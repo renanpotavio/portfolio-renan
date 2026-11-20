@@ -11,7 +11,7 @@ const PILARES = [
 
 export default function Sobre() {
   return (
-    <section id="sobre" data-fundo="fraco" className="container-site py-24 sm:py-32">
+    <section id="sobre" data-fundo="fraco" className="container-site py-20 sm:py-24">
       <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
         <Revelar>
           <p className="rotulo">Sobre mim</p>

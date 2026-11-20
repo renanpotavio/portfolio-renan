@@ -1,12 +1,12 @@
-import { Code2, Headset, Wrench, Workflow } from 'lucide-react';
+import { Code2, Headset, Palette, Workflow } from 'lucide-react';
 import { GRUPOS_SKILLS } from '../data/conteudo';
 import Revelar from './Revelar';
 
-const ICONES = { produto: Workflow, suporte: Headset, dev: Code2, ferramentas: Wrench };
+const ICONES = { dev: Code2, design: Palette, produto: Workflow, suporte: Headset };
 
 export default function Skills() {
   return (
-    <section id="skills" data-fundo="medio" className="container-site py-24 sm:py-32">
+    <section id="skills" data-fundo="medio" className="container-site py-20 sm:py-24">
       <Revelar className="max-w-xl">
         <p className="rotulo">Skills</p>
         <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Tecnologias e ferramentas</h2>

@@ -1,10 +1,10 @@
 import { GraduationCap, Target } from 'lucide-react';
-import { FORMACAO, OBJETIVO, TRILHAS_PM3 } from '../data/conteudo';
+import { FORMACAO, MODULOS_PM3, OBJETIVO, TRILHAS_PM3 } from '../data/conteudo';
 import Revelar from './Revelar';
 
 export default function Formacao() {
   return (
-    <section id="formacao" data-fundo="medio" className="container-site py-24 sm:py-32">
+    <section id="formacao" data-fundo="medio" className="container-site py-20 sm:py-24">
       <Revelar>
         <p className="rotulo">Formação</p>
         <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Estudos e trilhas</h2>
@@ -42,6 +42,15 @@ export default function Formacao() {
             {TRILHAS_PM3.map((t) => (
               <li key={t} className="rounded-full border border-borda bg-fundo/60 px-3 py-1.5 text-sm text-texto">
                 {t}
+              </li>
+            ))}
+          </ul>
+          <h4 className="mt-6 text-sm font-semibold">Módulos cursados em Product Management</h4>
+          <ul className="mt-3 grid gap-x-4 gap-y-1.5 text-sm text-suave sm:grid-cols-2">
+            {MODULOS_PM3.map((m) => (
+              <li key={m} className="flex items-center gap-2">
+                <span aria-hidden="true" className="size-1.5 shrink-0 rounded-full bg-destaque" />
+                {m}
               </li>
             ))}
           </ul>

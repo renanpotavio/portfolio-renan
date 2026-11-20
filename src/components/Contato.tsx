@@ -29,7 +29,7 @@ export default function Contato() {
   };
 
   return (
-    <section id="contato" data-fundo="forte" className="container-site py-24 sm:py-32">
+    <section id="contato" data-fundo="forte" className="container-site py-20 sm:py-24">
       <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
         <Revelar>
           <p className="rotulo">Vamos conversar?</p>
