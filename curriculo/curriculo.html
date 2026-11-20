@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<title>Renan Pinheiro | Currículo | Product &amp; Tech</title>
+<style>
+  /* Fontes do próprio projeto (as mesmas do site) */
+  @font-face {
+    font-family: 'Inter';
+    src: url('../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2') format('woff2');
+    font-weight: 100 900;
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url('../node_modules/@fontsource-variable/inter/files/inter-latin-ext-wght-normal.woff2') format('woff2');
+    font-weight: 100 900;
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+    font-family: 'Jakarta';
+    src: url('../node_modules/@fontsource-variable/plus-jakarta-sans/files/plus-jakarta-sans-latin-wght-normal.woff2') format('woff2');
+    font-weight: 200 800;
+  }
+
+  @page { size: A4; margin: 16mm 17mm 15mm; }
+
+  :root {
+    --texto: #0e1526;
+    --suave: #4a5670;
+    --linha: #d9e0ec;
+    --destaque: #2350e0;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  /* Só na tela (para conferir): simula a folha A4 com as margens */
+  @media screen { body { width: 210mm; padding: 16mm 17mm; } }
+  body {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 9.6pt;
+    line-height: 1.5;
+    color: var(--texto);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  header { padding-bottom: 10pt; border-bottom: 2pt solid var(--texto); }
+  h1 {
+    font-family: 'Jakarta', 'Inter', Arial, sans-serif;
+    font-size: 23pt;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  .contatos { margin-top: 6pt; color: var(--suave); font-size: 9.2pt; }
+  .contatos span + span::before { content: '|'; margin: 0 7pt; color: var(--linha); }
+
+  section { margin-top: 13pt; }
+  h2 {
+    font-family: 'Jakarta', 'Inter', Arial, sans-serif;
+    font-size: 9.2pt;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--destaque);
+    padding-bottom: 3pt;
+    margin-bottom: 7pt;
+    border-bottom: 0.75pt solid var(--linha);
+  }
+
+  p { text-align: justify; hyphens: auto; }
+
+  .competencias {
+    list-style: none;
+    columns: 3;
+    column-gap: 14pt;
+  }
+  .competencias li { padding-left: 9pt; position: relative; break-inside: avoid; }
+  .competencias li::before,
+  .itens li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 3.5pt;
+    height: 3.5pt;
+    border-radius: 50%;
+    background: var(--destaque);
+  }
+
+  .bloco { break-inside: avoid; }
+  .bloco + .bloco { margin-top: 9pt; }
+  .topo { display: flex; justify-content: space-between; align-items: baseline; gap: 12pt; }
+  h3 { font-size: 10.4pt; font-weight: 700; }
+  .periodo { font-size: 9pt; color: var(--suave); white-space: nowrap; }
+  .local { font-weight: 600; color: var(--suave); margin-top: 1pt; }
+
+  h4 { font-size: 9.6pt; font-weight: 700; margin-top: 6pt; }
+
+  .itens { list-style: none; margin-top: 3pt; }
+  .itens li { position: relative; padding-left: 10pt; }
+  .itens li + li { margin-top: 1.5pt; }
+  .tecnologias { margin-top: 4pt; }
+  .tecnologias strong { font-weight: 700; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>RENAN PINHEIRO OTÁVIO</h1>
+    <p class="contatos">
+      <span>Goiânia – GO</span><span>+55 (62) 99142-9486</span><span>Renanpinheirootavio@gmail.com</span>
+    </p>
+  </header>
+
+  <section>
+    <h2>Resumo profissional</h2>
+    <p>
+      Profissional em formação na área de Tecnologia da Informação, cursando Análise e
+      Desenvolvimento de Sistemas. Iniciei minha trajetória como Jovem Aprendiz Administrativo na
+      TIMAC Agro, atuando por quase 2 anos em atividades administrativas e suporte aos processos
+      internos. Posteriormente, realizei estágio no SENAI Fatesg em projetos de Realidade Virtual e
+      Aumentada e atuei como Analista de Suporte N1 Pleno na Poli Digital, adquirindo experiência em
+      atendimento a usuários, gestão de chamados, análise de problemas, documentação técnica e
+      comunicação com clientes. Busco continuar evoluindo na área de tecnologia, contribuindo com
+      organização, proatividade e resolução de problemas.
+    </p>
+  </section>
+
+  <section>
+    <h2>Competências e tecnologias</h2>
+    <ul class="competencias">
+      <li>Suporte Técnico N1</li>
+      <li>Atendimento ao Usuário</li>
+      <li>Gestão de Chamados</li>
+      <li>Documentação Técnica</li>
+      <li>Análise e Registro de Bugs</li>
+      <li>Windows</li>
+      <li>Microsoft 365</li>
+      <li>Redes Básicas</li>
+      <li>Jira</li>
+      <li>Scrum e Kanban</li>
+      <li>C#</li>
+      <li>Unity</li>
+      <li>Blender</li>
+      <li>Realidade Virtual (VR)</li>
+      <li>Realidade Aumentada (AR)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Formação acadêmica</h2>
+    <div class="bloco">
+      <div class="topo">
+        <h3>Análise e Desenvolvimento de Sistemas (Tecnólogo)</h3>
+        <span class="periodo">Cursando</span>
+      </div>
+      <p class="local">Universidade Cruzeiro do Sul</p>
+    </div>
+    <div class="bloco">
+      <div class="topo">
+        <h3>Técnico em Eletrotécnica</h3>
+        <span class="periodo">2020 – 2022</span>
+      </div>
+      <p class="local">Instituto Federal Goiano</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experiência profissional</h2>
+
+    <div class="bloco">
+      <div class="topo">
+        <h3>Analista de Suporte N1 Pleno</h3>
+        <span class="periodo">Período: 9 meses</span>
+      </div>
+      <p class="local">Poli Digital</p>
+      <ul class="itens">
+        <li>Atendimento e suporte de primeiro nível para clientes e colaboradores internos;</li>
+        <li>Abertura, acompanhamento e registro de chamados técnicos;</li>
+        <li>Identificação, análise e documentação de bugs na plataforma;</li>
+        <li>Escalonamento de demandas para equipes de Nível 2;</li>
+        <li>Registro e documentação de ocorrências garantindo rastreabilidade das informações;</li>
+        <li>Apoio na análise de inconsistências e testes básicos para validação de problemas;</li>
+        <li>Participação em reuniões de alinhamento e priorização de demandas;</li>
+        <li>Comunicação clara e objetiva com usuários para entendimento e resolução de solicitações.</li>
+      </ul>
+    </div>
+
+    <div class="bloco">
+      <div class="topo">
+        <h3>Desenvolvedor de Jogos VR e AR (Estágio)</h3>
+        <span class="periodo">05/2024 – 01/2025</span>
+      </div>
+      <p class="local">SENAI Fatesg</p>
+      <ul class="itens">
+        <li>Desenvolvimento de projetos de Realidade Virtual (VR) e Realidade Aumentada (AR);</li>
+        <li>Criação e modelagem de assets 3D utilizando Blender;</li>
+        <li>Desenvolvimento de aplicações utilizando Unity e C#;</li>
+        <li>Participação em todas as etapas do ciclo de desenvolvimento dos projetos.</li>
+      </ul>
+
+      <h4>Projeto Carga Indivisível VR</h4>
+      <ul class="itens">
+        <li>Desenvolvimento de simulações imersivas para treinamentos de Normas Regulamentadoras;</li>
+        <li>Implementação de funcionalidades em C# utilizando Unity;</li>
+        <li>Realização de testes e validações do ambiente virtual;</li>
+        <li>Criação e ajustes de assets para utilização nos cenários do projeto.</li>
+      </ul>
+      <p class="tecnologias"><strong>Tecnologias:</strong> C#, Unity, Blender, VR e AR.</p>
+
+      <h4>Outros Projetos</h4>
+      <ul class="itens">
+        <li>Desenvolvimento de sistema de atendimento de socorro pós-acidente;</li>
+        <li>Programação e animação de veículos de emergência;</li>
+        <li>Correção de bugs e manutenção de aplicações já existentes;</li>
+        <li>Implementação de melhorias solicitadas por clientes.</li>
+      </ul>
+    </div>
+
+    <div class="bloco">
+      <div class="topo">
+        <h3>Jovem Aprendiz Administrativo</h3>
+        <span class="periodo">21/08/2023 – 02/06/2025</span>
+      </div>
+      <p class="local">TIMAC Agro Brasil</p>
+      <ul class="itens">
+        <li>Apoio às atividades administrativas e operacionais da unidade;</li>
+        <li>Controle e atualização de planilhas, relatórios e documentos internos;</li>
+        <li>Organização e arquivamento de documentos;</li>
+        <li>Suporte aos colaboradores em processos internos;</li>
+        <li>Acompanhamento de indicadores e elaboração de relatórios;</li>
+        <li>Desenvolvimento de habilidades em comunicação, organização e trabalho em equipe.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bloco">
+    <h2>Cursos complementares</h2>
+    <h3>PM3 – Product Management</h3>
+    <ul class="competencias" style="margin-top: 4pt">
+      <li>Fundamentos de Produto</li>
+      <li>Product Discovery</li>
+      <li>Product Delivery</li>
+      <li>Scrum e Kanban</li>
+      <li>Priorização de Demandas</li>
+      <li>Métricas de Produto</li>
+    </ul>
+  </section>
+</body>
+</html>
