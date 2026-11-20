@@ -10,56 +10,44 @@ export interface Projeto {
   id: string;
   titulo: string;
   resumo: string;
-  descricao: string[];
+  contribuicoes: string[];
   categoria: Categoria;
   tecnologias: string[];
-  imagens: { src: string; alt: string }[];
-  link?: string;
 }
 
-// PROVISÓRIO: as imagens são capas temporárias até chegarem os prints reais.
+// Projetos feitos para clientes, sob sigilo: sem prints nem links, só o que foi feito e as tecnologias.
 export const PROJETOS: Projeto[] = [
   {
     id: 'carga-indivisivel',
     titulo: 'Carga Indivisível VR',
-    resumo: 'Simulação imersiva para treinamento de Normas Regulamentadoras.',
-    descricao: [
-      'Simulação em realidade virtual para treinar procedimentos de transporte de carga indivisível, seguindo as Normas Regulamentadoras.',
-      'Implementei funcionalidades em C# no Unity, criei e ajustei assets 3D no Blender e fiz testes e validações do ambiente virtual.',
+    resumo: 'Simulação imersiva em realidade virtual para treinamento de Normas Regulamentadoras.',
+    contribuicoes: [
+      'Funcionalidades em C# no Unity',
+      'Criação e ajuste de assets 3D no Blender',
+      'Testes e validação do ambiente virtual',
     ],
     categoria: 'VR/AR',
     tecnologias: ['C#', 'Unity', 'Blender', 'VR'],
-    imagens: [
-      { src: '/projetos/carga-1.svg', alt: 'Capa provisória do projeto Carga Indivisível VR' },
-      { src: '/projetos/carga-2.svg', alt: 'Segunda imagem provisória do projeto Carga Indivisível VR' },
-    ],
   },
   {
     id: 'atendimento-socorro',
     titulo: 'Atendimento de Socorro',
-    resumo: 'Treinamento de primeiros socorros pós-acidente com simulação interativa.',
-    descricao: [
-      'Sistema de treinamento para atendimento de socorro pós-acidente, com cenários interativos em 3D.',
-      'Programei e animei os veículos de emergência, corrigi bugs e implementei melhorias pedidas pelos clientes.',
+    resumo: 'Treinamento de atendimento de socorro pós-acidente com simulação interativa em 3D.',
+    contribuicoes: [
+      'Programação e animação de veículos de emergência',
+      'Correção de bugs e manutenção',
+      'Melhorias solicitadas pelos clientes',
     ],
     categoria: 'VR/AR',
     tecnologias: ['Unity', 'C#', '3D'],
-    imagens: [
-      { src: '/projetos/socorro-1.svg', alt: 'Capa provisória do projeto Atendimento de Socorro' },
-      { src: '/projetos/socorro-2.svg', alt: 'Segunda imagem provisória do projeto Atendimento de Socorro' },
-    ],
   },
   {
     id: 'projetos-interativos',
     titulo: 'Projetos Interativos',
-    resumo: 'Aplicações web interativas para clientes, com foco em usabilidade.',
-    descricao: [
-      'Aplicações web e interativas desenvolvidas para clientes, com atenção à usabilidade e ao desempenho.',
-      'PROVISÓRIO: descrição a confirmar com o Renan (quais projetos, links e prints).',
-    ],
+    resumo: 'Aplicações web e interativas para clientes, com foco em usabilidade e desempenho.',
+    contribuicoes: [],
     categoria: 'Web',
     tecnologias: ['HTML', 'CSS', 'JavaScript'],
-    imagens: [{ src: '/projetos/web-1.svg', alt: 'Capa provisória dos Projetos Interativos' }],
   },
 ];
 

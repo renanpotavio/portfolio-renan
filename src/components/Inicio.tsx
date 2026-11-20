@@ -1,6 +1,12 @@
-import { ArrowRight, Mail } from 'lucide-react';
+import { ArrowRight, Box, Headset, Mail, MapPin, Target } from 'lucide-react';
 import { CONTATO } from '../data/conteudo';
 import IconeLinkedin from './IconeLinkedin';
+
+const FOCOS = [
+  { icone: Target, titulo: 'Produto', texto: 'Rumo a Product Owner Júnior, com formação na PM3.' },
+  { icone: Box, titulo: 'Tecnologia', texto: 'Unity, C# e Blender em projetos de VR/AR.' },
+  { icone: Headset, titulo: 'Pessoas', texto: 'Suporte N1, atendimento e comunicação com usuários.' },
+];
 
 const botaoRede =
   'grid size-10 place-items-center rounded-full border border-borda transition-[color,border-color] hover:border-destaque hover:text-texto';
@@ -43,23 +49,27 @@ export default function Inicio() {
         </div>
       </div>
 
-      {/* PROVISÓRIO: a foto do Renan entra aqui, no lugar do monograma */}
-      <div className="relative mx-auto w-full max-w-xs sm:max-w-sm">
-        <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-borda bg-cartao">
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,color-mix(in_srgb,var(--color-destaque)_35%,transparent),transparent_60%)]"
-          />
-          <div className="absolute inset-0 grid place-items-center">
-            <span className="font-titulo text-8xl font-extrabold tracking-tighter text-texto/90">RP</span>
-          </div>
-        </div>
-        <div className="absolute -bottom-5 left-4 rounded-2xl border border-borda bg-cartao/95 px-4 py-3 shadow-xl backdrop-blur sm:-left-6">
-          <p className="flex items-center gap-2 text-sm font-medium">
-            <span className="size-2 rounded-full bg-emerald-500" aria-hidden="true" /> Em constante evolução
-          </p>
-          <p className="mt-1 text-xs text-suave">Tecnologia · Produto · Pessoas</p>
-        </div>
+      {/* Sem foto por enquanto: um cartão com os três focos do Renan */}
+      <div className="relative w-full max-w-md rounded-[2rem] border border-borda bg-cartao/85 p-6 backdrop-blur-sm sm:p-7 lg:justify-self-end">
+        <p className="flex items-center gap-2 text-sm font-medium">
+          <span className="size-2 rounded-full bg-emerald-500" aria-hidden="true" /> Em constante evolução
+        </p>
+        <ul className="mt-6 space-y-5">
+          {FOCOS.map(({ icone: Icone, titulo, texto }) => (
+            <li key={titulo} className="flex gap-4">
+              <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-destaque/12 text-destaque">
+                <Icone size={20} aria-hidden="true" />
+              </span>
+              <div>
+                <p className="font-titulo font-semibold">{titulo}</p>
+                <p className="mt-0.5 text-sm text-suave">{texto}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-6 flex items-center gap-2 border-t border-borda pt-5 text-sm text-suave">
+          <MapPin size={15} aria-hidden="true" /> {CONTATO.cidade}
+        </p>
       </div>
     </section>
   );

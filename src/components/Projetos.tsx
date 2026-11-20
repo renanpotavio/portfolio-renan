@@ -1,17 +1,16 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
-import { ArrowRight } from 'lucide-react';
-import { PROJETOS, type Projeto } from '../data/conteudo';
+import { Box, Check, Globe } from 'lucide-react';
+import { PROJETOS } from '../data/conteudo';
 import { EASE_SUAVE } from '../lib/movimento';
-import ProjetoModal from './ProjetoModal';
 import Revelar from './Revelar';
 
 // Filtros saem dos próprios dados: nunca aparece um filtro vazio.
 const FILTROS = ['Todos', ...new Set(PROJETOS.map((p) => p.categoria))];
+const ICONE_CATEGORIA = { 'VR/AR': Box, Web: Globe };
 
 export default function Projetos() {
   const [filtro, setFiltro] = useState('Todos');
-  const [aberto, setAberto] = useState<Projeto | null>(null);
   const lista = filtro === 'Todos' ? PROJETOS : PROJETOS.filter((p) => p.categoria === filtro);
 
   return (
@@ -54,50 +53,50 @@ export default function Projetos() {
 
       <motion.ul layout className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         <AnimatePresence mode="popLayout" initial={false}>
-          {lista.map((p) => (
-            <motion.li
-              key={p.id}
-              layout
-              initial={{ opacity: 0, scale: 0.97 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.97 }}
-              transition={{ duration: 0.35, ease: EASE_SUAVE }}
-            >
-              <button
-                type="button"
-                onClick={() => setAberto(p)}
-                className="group flex h-full w-full flex-col overflow-hidden rounded-2xl border border-borda bg-cartao text-left transition-[border-color,translate] duration-300 hover:-translate-y-1 hover:border-destaque/60"
+          {lista.map((p) => {
+            const Icone = ICONE_CATEGORIA[p.categoria];
+            return (
+              <motion.li
+                key={p.id}
+                layout
+                initial={{ opacity: 0, scale: 0.97 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.97 }}
+                transition={{ duration: 0.35, ease: EASE_SUAVE }}
+                className="flex flex-col rounded-2xl border border-borda bg-cartao/85 p-6 backdrop-blur-sm transition-[border-color] duration-300 hover:border-destaque/60"
               >
-                <div className="aspect-[16/10] overflow-hidden">
-                  <img
-                    src={p.imagens[0].src}
-                    alt=""
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-[scale] duration-500 group-hover:scale-[1.04]"
-                  />
+                <div className="flex items-center justify-between">
+                  <span className="grid size-11 place-items-center rounded-xl bg-destaque/12 text-destaque">
+                    <Icone size={20} aria-hidden="true" />
+                  </span>
+                  <span className="text-xs font-semibold tracking-wide text-suave uppercase">{p.categoria}</span>
                 </div>
-                <div className="flex flex-1 flex-col p-5">
-                  <h3 className="font-titulo text-lg font-semibold">{p.titulo}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-suave">{p.resumo}</p>
-                  <ul className="mt-4 flex flex-wrap gap-2">
-                    {p.tecnologias.map((t) => (
-                      <li key={t} className="rounded-full border border-borda px-2.5 py-0.5 text-xs text-suave">
-                        {t}
+                <h3 className="mt-5 font-titulo text-lg font-semibold">{p.titulo}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-suave">{p.resumo}</p>
+
+                {p.contribuicoes.length > 0 && (
+                  <ul className="mt-4 space-y-1.5 text-sm text-texto">
+                    {p.contribuicoes.map((c) => (
+                      <li key={c} className="flex gap-2">
+                        <Check size={15} className="mt-0.5 shrink-0 text-destaque" aria-hidden="true" />
+                        {c}
                       </li>
                     ))}
                   </ul>
-                  <span className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold text-destaque">
-                    Ver projeto
-                    <ArrowRight size={15} className="transition-[translate] group-hover:translate-x-1" />
-                  </span>
-                </div>
-              </button>
-            </motion.li>
-          ))}
+                )}
+
+                <ul aria-label="Tecnologias" className="mt-auto flex flex-wrap gap-2 pt-5">
+                  {p.tecnologias.map((t) => (
+                    <li key={t} className="rounded-full border border-borda px-2.5 py-0.5 text-xs text-suave">
+                      {t}
+                    </li>
+                  ))}
+                </ul>
+              </motion.li>
+            );
+          })}
         </AnimatePresence>
       </motion.ul>
-
-      <ProjetoModal projeto={aberto} aoFechar={() => setAberto(null)} />
     </section>
   );
 }
