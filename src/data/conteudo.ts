@@ -177,5 +177,7 @@ export const CONTATO = {
   telefoneLink: '+5562991429486',
   linkedin: 'https://www.linkedin.com/in/renan-pinheiro-otavio',
   linkedinTexto: 'linkedin.com/in/renan-pinheiro-otavio',
+  github: 'https://github.com/renanpotavio',
+  githubTexto: 'github.com/renanpotavio',
   cidade: 'Goiânia – GO',
 };

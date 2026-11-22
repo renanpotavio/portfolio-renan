@@ -1,5 +1,6 @@
 import { ArrowRight, Box, Headset, Mail, MapPin, Target } from 'lucide-react';
 import { CONTATO } from '../data/conteudo';
+import IconeGithub from './IconeGithub';
 import IconeLinkedin from './IconeLinkedin';
 
 const FOCOS = [
@@ -40,6 +41,9 @@ export default function Inicio() {
           </a>
         </div>
         <div className="mt-8 flex items-center gap-2 text-suave">
+          <a href={CONTATO.github} target="_blank" rel="noreferrer" aria-label="GitHub" className={botaoRede}>
+            <IconeGithub size={17} />
+          </a>
           <a href={CONTATO.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className={botaoRede}>
             <IconeLinkedin size={17} />
           </a>

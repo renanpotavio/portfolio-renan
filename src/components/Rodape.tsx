@@ -1,5 +1,6 @@
 import { Mail } from 'lucide-react';
 import { CONTATO } from '../data/conteudo';
+import IconeGithub from './IconeGithub';
 import IconeLinkedin from './IconeLinkedin';
 
 const botao =
@@ -12,6 +13,9 @@ export default function Rodape() {
         <p className="font-titulo font-semibold text-texto">Renan Pinheiro</p>
         <p>Tecnologia · Produto · Pessoas</p>
         <div className="flex items-center gap-2">
+          <a href={CONTATO.github} target="_blank" rel="noreferrer" aria-label="GitHub" className={botao}>
+            <IconeGithub size={16} />
+          </a>
           <a href={CONTATO.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className={botao}>
             <IconeLinkedin size={16} />
           </a>

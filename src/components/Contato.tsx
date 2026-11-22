@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
 import { CONTATO } from '../data/conteudo';
+import IconeGithub from './IconeGithub';
 import IconeLinkedin from './IconeLinkedin';
 import Revelar from './Revelar';
 
@@ -8,6 +9,7 @@ const CANAIS = [
   { icone: Mail, texto: CONTATO.email, href: `mailto:${CONTATO.email}` },
   { icone: Phone, texto: CONTATO.telefone, href: `tel:${CONTATO.telefoneLink}` },
   { icone: IconeLinkedin, texto: CONTATO.linkedinTexto, href: CONTATO.linkedin },
+  { icone: IconeGithub, texto: CONTATO.githubTexto, href: CONTATO.github },
   { icone: MapPin, texto: CONTATO.cidade, href: undefined },
 ];
 
