@@ -8,3 +8,4 @@ tsconfig.tsbuildinfo
 !.vscode/extensions.json
 .idea
 .DS_Store
+prints-whatsapp/
